@@ -1,5 +1,7 @@
 import getSocks from './getSocks';
 
+// public
+
 export const renderAllSocks = () => {
   const socks = getSocks();
       for(let sock of socks) {
@@ -8,5 +10,9 @@ export const renderAllSocks = () => {
           // append elements to page
       }
 }
+
+// private
+
+const createRows;
 
 
