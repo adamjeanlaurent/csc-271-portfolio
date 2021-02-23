@@ -1,0 +1,16 @@
+body { 
+    padding-top: 65px; 
+}
+
+#leftSockImage {
+    height: 50rem;
+    /*width: 40rem;
+    margin-left: 5rem; */
+    /* height: 50%; */
+    width: 80%;
+    margin-left: 10%;
+}
+
+#descUL {
+    margin-bottom: 50px;
+}

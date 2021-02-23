@@ -11,6 +11,10 @@ export const renderAllSocks = () => {
       }
 }
 
+export const renderSock = () => {
+    
+}
+
 // private
 
 const createRows;
