@@ -1,5 +1,5 @@
 export default class Sock {
-    constructor(id, imgPath, desc, price, materials, title) {
+    constructor(id, title, imgPath, desc, price, materials) {
         this.id = id;
         this.title = title;
         this.imgPath = imgPath;
