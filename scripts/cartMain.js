@@ -1,10 +1,20 @@
+let cartTotalPrice = 0;
+
 const readCart = () => {
     const cart = JSON.parse(localStorage.getItem('sock-cart'));
     if(!cart) return;
-
     for(let item of cart) {
-        renderCartItem(item);
+        let price = renderCartItem(item);
+        cartTotalPrice += price;
     }
+
+    setCheckoutPrice();
+}
+
+const setCheckoutPrice = (priceToSubtract = 0) => {
+    const div = document.querySelector('#checkout-price');
+    cartTotalPrice -= priceToSubtract;
+    div.textContent = `Cart Total: $${cartTotalPrice}`;
 }
 
 const removeCartItem = (event) => {
@@ -13,11 +23,12 @@ const removeCartItem = (event) => {
     if(item) {
         item.remove();
         const cart = JSON.parse(localStorage.getItem('sock-cart'));
-
+        
         let found = false;
         const newCart = cart.filter((cartItem) =>{
             if(cartItem.id === specifier && !found) {
                 found = true;
+                setCheckoutPrice(parseInt(cartItem.price.substring(1,3)));
                 return false;
             }
             return true;
@@ -64,7 +75,10 @@ const renderCartItem = (item) => {
     div.appendChild(span);
     div.appendChild(button);
 
-    container.appendChild(div);
+    container.prepend(div);
+
+    // return price of sock
+    return parseInt(item.price.substring(1,3));
 }
 
 $(document).ready(() => {
