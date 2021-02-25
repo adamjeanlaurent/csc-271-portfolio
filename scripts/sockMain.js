@@ -1,9 +1,9 @@
-import { getSocks } from './getSocks';
+import getSocks  from './getSocks.js';
 
 const addToCardButton = $('#addToCart');
 
 const addToCart = (e) => {
-    const itemId = addToCardButton.getAttribute('itemid');
+    const itemId = addToCardButton.attr('itemid');
     const sock = getSocks(itemId);
     if(localStorage.getItem('sock-cart')) {
         const cart = JSON.parse(localStorage.getItem('sock-cart'));

@@ -1,11 +1,11 @@
-import Sock from "./Sock";
+import Sock from "./Sock.js";
 
 export default function getSocks(id = false) {
     const socks = [
         new Sock(
             'christmas',
             'Christmas Sock',
-            'images/christmas-sock',
+            '../images/christmas-sock.jpg',
             'lorem ipsum',
             '$12.00',
             ['cotton' , 'wool']
@@ -13,7 +13,7 @@ export default function getSocks(id = false) {
         new Sock(
             'greenbee',
             'Green Bee Sock',
-            'images/green-bee-sock',
+            '../images/green-bee-sock.jpg',
             'lorem ipsum',
             '$12.00',
             ['cotton' , 'wool']
@@ -21,7 +21,7 @@ export default function getSocks(id = false) {
         new Sock(
             'spongebob',
             'Spongebob Sock',
-            'images/spongebob-sock',
+            '../images/spongebob-sock.jpg',
             'lorem ipsum',
             '$12.00',
             ['cotton' , 'wool']
@@ -29,7 +29,7 @@ export default function getSocks(id = false) {
         new Sock(
             'orange',
             'Spotted Orange/Black Sock',
-            'images/spotted-orange-black-sock',
+            '../images/spotted-orange-black-sock.jpg',
             'lorem ipsum',
             '$12.00',
             ['cotton' , 'wool']
@@ -37,7 +37,7 @@ export default function getSocks(id = false) {
         new Sock(
             'red',
             'Spotted Red/Black Sock',
-            'images/spotted-red-black-sock',
+            '../images/spotted-red-black-sock.jpg',
             'lorem ipsum',
             '$12.00',
             ['cotton' , 'wool']
@@ -45,7 +45,7 @@ export default function getSocks(id = false) {
         new Sock(
             'yellow',
             'Spotted Yellow/Black Sock',
-            'images/spotted-yellow-black-sock',
+            '../images/spotted-yellow-black-sock.jpg',
             'lorem ipsum',
             '$12.00',
             ['cotton' , 'wool']
