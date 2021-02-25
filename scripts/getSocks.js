@@ -6,23 +6,23 @@ export default function getSocks(id = false) {
             'christmas',
             'Christmas Sock',
             '../images/christmas-sock.jpg',
-            'lorem ipsum',
-            '$12.00',
+            'Christmas sock to keep you warm during the holidays.',
+            '$11.00',
             ['cotton' , 'wool']
         ),
         new Sock(
             'greenbee',
             'Green Bee Sock',
             '../images/green-bee-sock.jpg',
-            'lorem ipsum',
-            '$12.00',
+            'Save the bees with this stylish bee sock!',
+            '$18.00',
             ['cotton' , 'wool']
         ),
         new Sock(
             'spongebob',
             'Spongebob Sock',
             '../images/spongebob-sock.jpg',
-            'lorem ipsum',
+            'Pass your boating test in these Spongebob socks.',
             '$12.00',
             ['cotton' , 'wool']
         ),
@@ -30,24 +30,24 @@ export default function getSocks(id = false) {
             'orange',
             'Spotted Orange/Black Sock',
             '../images/spotted-orange-black-sock.jpg',
-            'lorem ipsum',
-            '$12.00',
+            'Black sock with orange accents.',
+            '$15.00',
             ['cotton' , 'wool']
         ),
         new Sock(
             'red',
             'Spotted Red/Black Sock',
             '../images/spotted-red-black-sock.jpg',
-            'lorem ipsum',
-            '$12.00',
+            'Black sock with red accents.',
+            '$11.00',
             ['cotton' , 'wool']
         ),
         new Sock(
             'yellow',
             'Spotted Yellow/Black Sock',
             '../images/spotted-yellow-black-sock.jpg',
-            'lorem ipsum',
-            '$12.00',
+            'Black sock with yellow accents.',
+            '$10.00',
             ['cotton' , 'wool']
         ),
     ];

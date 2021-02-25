@@ -3,6 +3,7 @@ let cartTotalPrice = 0;
 const readCart = () => {
     const cart = JSON.parse(localStorage.getItem('sock-cart'));
     if(!cart) return;
+    
     for(let item of cart) {
         let price = renderCartItem(item);
         cartTotalPrice += price;
@@ -21,13 +22,17 @@ const removeCartItem = (event) => {
     const specifier = event.target.getAttribute('specifier');
     const item = document.querySelector(`div[specifier='${specifier}']`);
     if(item) {
+        // remove item from cart (in DOM)
         item.remove();
         const cart = JSON.parse(localStorage.getItem('sock-cart'));
         
         let found = false;
+        
+        // update cart with removed item
         const newCart = cart.filter((cartItem) =>{
             if(cartItem.id === specifier && !found) {
                 found = true;
+                // set new checkout price
                 setCheckoutPrice(parseInt(cartItem.price.substring(1,3)));
                 return false;
             }
@@ -41,7 +46,7 @@ const removeCartItem = (event) => {
 const renderCartItem = (item) => {
     const container = document.querySelector('#containerMargin');
 
-    // crea te div
+    // create div
     const div = document.createElement('div');
     div.classList.add('alert', 'alert-dark');
     div.setAttribute('role', 'alert');
