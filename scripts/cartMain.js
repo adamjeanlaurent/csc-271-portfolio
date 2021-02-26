@@ -1,14 +1,15 @@
 let cartTotalPrice = 0;
+// localStorage.removeItem('sock-cart');
 
 const readCart = () => {
     const cart = JSON.parse(localStorage.getItem('sock-cart'));
-    if(!cart) return;
-    
-    for(let item of cart) {
-        let price = renderCartItem(item);
-        cartTotalPrice += price;
+    if(cart) {
+        for(let item of cart) {
+            let price = renderCartItem(item);
+            cartTotalPrice += price;
+        }
     }
-
+  
     setCheckoutPrice();
 }
 
@@ -38,12 +39,13 @@ const removeCartItem = (event) => {
             }
             return true;
         });
-
+        
         localStorage.setItem('sock-cart', JSON.stringify(newCart));
     }
 }
 
 const renderCartItem = (item) => {
+    if(!item.price) return 0;
     const container = document.querySelector('#containerMargin');
 
     // create div

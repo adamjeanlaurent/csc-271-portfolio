@@ -23,14 +23,18 @@
    width: 20rem;
 }
 
-.indexSockImage:hover {
-    opacity: 70%;
-    /* height: 70%;
-    width: 75%; */
-}
-
 .card {
     /* width: 18rem;
     height: 30rem; */
     margin-bottom: 70px;
+    background-color: #aaaaaa !important;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    opacity: 70%;
+}
+
+nav {
+    background-color: #ffab73 !important;
 }
