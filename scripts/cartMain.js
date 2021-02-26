@@ -53,6 +53,7 @@ const renderCartItem = (item) => {
     div.classList.add('alert', 'alert-dark');
     div.setAttribute('role', 'alert');
     div.setAttribute('specifier', item.id);
+    div.setAttribute('tabindex', '0');
 
     // create h4
     const h4 = document.createElement('h4');
@@ -62,6 +63,8 @@ const renderCartItem = (item) => {
     const img = document.createElement('img');
     img.setAttribute('src', item.imgPath);
     img.classList.add('alertSock');
+    img.setAttribute('aria-label', `picture of ${item.title}`);
+    img.setAttribute('tabindex', '0');
     
     // create span
     const span = document.createElement('span');
