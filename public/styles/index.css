@@ -26,13 +26,13 @@
 .card {
     /* width: 18rem;
     height: 30rem; */
-    margin-bottom: 70px;
+    margin-bottom: 70px !important;
     background-color: #aaaaaa !important;
 }
 
 .card:hover {
-    transform: scale(1.1);
-    opacity: 70%;
+    transform: scale(1.1) !important;
+    opacity: 70% !important;
 }
 
 nav {

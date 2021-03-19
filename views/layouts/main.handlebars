@@ -12,11 +12,14 @@
       crossorigin="anonymous"
     />
     <script src="https://kit.fontawesome.com/c76fb52376.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles/cart.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/homepage.css">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/sock.css">
+    {{!-- <link rel="stylesheet" href="../styles/cart.css">
+    <link rel="stylesheet" href="../styles/homepage.css">
+    <link rel="stylesheet" href="../styles/sock.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/footer.css"> --}}
+    {{#each styles}}
+      <link rel="stylesheet" href={{ this }}>
+    {{/each}}
 </head>
 <body>
  <!-- navbar -->
@@ -50,7 +53,7 @@
             </li>
           </ul>
         </div>
-      </div>
+      </div> 
     </nav>
     <!-- navbar -->
     
@@ -69,5 +72,5 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-</body>
+    </body>
 </html>

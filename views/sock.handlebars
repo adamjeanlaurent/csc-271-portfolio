@@ -1,0 +1,21 @@
+    <!-- content -->
+    <!-- container fluid takes up 100% width -->
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-7 col-md-7 col-sm-7">
+            <img src={{ sock.imgPath }} alt="picture of sock" id ="leftSockImage" aria-label="picture of sock" tabindex="0">
+          </div>
+          <div class="col-lg-5 col-md-5 col-sm-5">
+            <ul id="descUL">
+                <li tabindex="0"><strong>Name:</strong> {{ sock.title }}</li>
+                <li tabindex="0"><strong>Description:</strong> {{ sock.desc }}</li>
+                <li tabindex="0"><strong>Price:</strong> {{ sock.price }}</li>
+                <li tabindex="0"><strong>Materials:</strong> {{ sock.materials }}</li>
+            </ul>
+            <button id ="addToCart" itemid= {{ sock.id }} class = "btn btn-warning" tabindex="0">Add To Cart</button>
+          </div>
+        </div>
+        </div>
+    <!-- content -->
+    
+    <script type="module" src="../scripts/sockMain.js"></script>
